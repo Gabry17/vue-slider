@@ -163,6 +163,13 @@ const app = new Vue(
                 } else {
                     this.currentSlide--;
                 }
+                // togliamo la classe active dall'item
+                document.querySelector('.item.active').classList.remove('active');
+                document.querySelector('.thumb.active').classList.remove('active');
+
+                // aggiungiamo la classe active all'item corrente
+                document.querySelectorAll('.item')[this.currentSlide].classList.add('active');
+                document.querySelectorAll('.thumb')[this.currentSlide].classList.add('active');
             },
             nextImg(){
                 if(this.currentSlide === this.imageList.length - 1){
