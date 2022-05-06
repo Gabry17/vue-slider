@@ -155,6 +155,22 @@ const app = new Vue(
             ],
             currentSlide: 0,
             firstActive: 'active'
+        },
+        methods:{
+            prevImg(){
+                if(this.currentSlide === 0){
+                    currentSlide = this.imageList.length - 1;
+                } else {
+                    this.currentSlide--;
+                }
+            },
+            nextImg(){
+                if(this.currentSlide === this.imageList.length - 1){
+                    currentSlide = 0;
+                } else {
+                    this.currentSlide++;
+                }
+            }
         }
     }
 );

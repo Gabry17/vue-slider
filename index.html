@@ -25,8 +25,8 @@
                 <div class="thumb" :class="firstActive">   
                     <img :src="element.image" :alt="element.title">
                 </div>
-                <div class="prev"></div>
-                <div class="next"></div>
+                <div class="prev" @click="prevImg"></div>
+                <div class="next" @click="nextImg"></div>
             </div>
        </div>
     </div>
