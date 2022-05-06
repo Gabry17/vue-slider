@@ -11,19 +11,19 @@
 <body>
     
     <div id="root">
-        <div class="container">
-            <div class="items">
-                <div class="item active">
-                    <img src="./img/01.jpg" alt="">
+        <div  class="container">
+            <div v-for="(element,index) in imageList" class="items" v-if="index === currentSlide">
+                <div class="item" :class="firstActive">
+                    <img :src="element.image" :alt="element.title">
                     <div class="text">
-                        <h3>Lorem</h3>
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam, cumque provident totam omnis, magnam dolores dolorum corporis.</p>
+                        <h3>{{ element.title }}</h3>
+                        <p>{{ element.text }}</p>
                     </div>
                 </div>
             </div>
-            <div class="thumbs">
-                <div class="thumb active">
-                    <img src="./img/01.jpg" alt="">
+            <div v-for="(element,index) in imageList" class="thumbs" v-if="index === currentSlide">
+                <div class="thumb" :class="firstActive">   
+                    <img :src="element.image" :alt="element.title">
                 </div>
                 <div class="prev"></div>
                 <div class="next"></div>
