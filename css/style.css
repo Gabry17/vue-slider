@@ -76,6 +76,10 @@
     z-index: 999;
 }
 
+.prev{
+    top:0;
+}
+
 .next {
     bottom: 0;
 }
